@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Website Store</title>
+    <link rel="stylesheet" href="PAYMENT.CSS">
+
+    <!-- login guard: bina login ke payment page nahi khulega -->
+    <script>
+        (function () {
+            try {
+                var s = JSON.parse(localStorage.getItem("storeSession"));
+                var u = JSON.parse(localStorage.getItem("storeUsers"));
+                if (!(s && u && u[s.u])) throw 0;
+            } catch (e) {
+                window.location.replace("index.html?login=1");
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ANIMATED BACKGROUND -->
+    <div class="bg-anim">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="payment-navbar">
+        <img src="asad3.png" alt="Logo">
+        <h2>Website Store</h2>
+    </nav>
+
+    <!-- PAYMENT -->
+    <main class="payment-container">
+        <div class="payment-box">
+
+            <div class="payment-icon">🔒</div>
+
+            <h1>Complete Your Purchase</h1>
+            <p class="subtitle">You are purchasing</p>
+
+            <div class="product-name" id="productName">Business Website</div>
+            <div class="payment-price" id="productPrice">₹3,999</div>
+
+            <!-- QR -->
+            <div class="qr-section">
+                <h3>Scan &amp; Pay</h3>
+                <p>Scan the QR code using your UPI app</p>
+
+                <div class="qr-box">
+                    <i></i><i></i><i></i><i></i>
+                    <div class="scan-glow"></div>
+                    <div class="scan-line"></div>
+                    <img src="scnner.png" alt="Payment QR Code">
+                </div>
+            </div>
+
+            <!-- UPI -->
+            <div class="upi-info" id="upiBox" title="Click to copy">
+                <strong>UPI ID</strong>
+                <p id="upiId">yourname@upi</p>
+                <small id="copyHint">Tap to copy</small>
+            </div>
+
+            <div class="payment-note">
+                💡 Complete the payment and then click the button below.
+            </div>
+
+            <button class="payment-btn" id="paidBtn" onclick="paymentDone()">
+                I Have Paid
+            </button>
+
+            <div id="payment-message" class="payment-message"></div>
+
+            <a href="index.html" class="back-btn">← Back to Websites</a>
+
+        </div>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const product = params.get("product");
+        const price = params.get("price");
+
+        if (product) document.getElementById("productName").textContent = product;
+        if (price) document.getElementById("productPrice").textContent =
+            "₹" + Number(price).toLocaleString("en-IN");
+
+        // Copy UPI ID
+        document.getElementById("upiBox").addEventListener("click", () => {
+            const id = document.getElementById("upiId").textContent;
+            const hint = document.getElementById("copyHint");
+            (navigator.clipboard ? navigator.clipboard.writeText(id) : Promise.reject())
+                .then(() => hint.textContent = "✅ Copied!")
+                .catch(() => hint.textContent = "Copy not supported");
+            setTimeout(() => hint.textContent = "Tap to copy", 1800);
+        });
+
+        function confetti() {
+            const colors = ["#00e5a0", "#00b4ff", "#ffd600", "#ff4081", "#fff"];
+            for (let i = 0; i < 70; i++) {
+                const c = document.createElement("div");
+                c.className = "confetti";
+                c.style.left = Math.random() * 100 + "vw";
+                c.style.background = colors[i % colors.length];
+                c.style.animationDuration = 2 + Math.random() * 2 + "s";
+                c.style.animationDelay = Math.random() * 0.6 + "s";
+                document.body.appendChild(c);
+                setTimeout(() => c.remove(), 5000);
+            }
+        }
+
+        function paymentDone() {
+            const btn = document.getElementById("paidBtn");
+            const msg = document.getElementById("payment-message");
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span>Processing...';
+            msg.className = "payment-message";
+            msg.innerHTML = "";
+
+            setTimeout(() => {
+                btn.innerHTML = "✔ Submitted";
+                msg.className = "payment-message show";
+                msg.innerHTML =
+                    '<svg class="check" viewBox="0 0 70 70">' +
+                    '<circle cx="35" cy="35" r="30"/>' +
+                    '<path d="M22 36 L32 46 L49 26"/></svg>' +
+                    '<div style="margin-top:10px">Payment confirmation received.<br>We will verify and contact you shortly.</div>';
+                confetti();
+            }, 1800);
+        }
+    </script>
+</body>
+</html>

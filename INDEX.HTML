@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Store</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">LOADING STORE</div>
+    </div>
+
+    <div id="progress"></div>
+    <div id="cursor-glow"></div>
+    <canvas id="particles"></canvas>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+
+        <div class="navlogo">
+            <div class="logo">
+                <img src="asad3.png" alt="Logo">
+            </div>
+        </div>
+
+        <div class="navlinks">
+            <a href="#">Home</a>
+            <a href="#websites">Websites</a>
+            <a href="#categories">Categories</a>
+            <a href="#contact">Contact</a>
+            <a href="#">🛒 Cart <span class="cart-count" id="cartCount">0</span></a>
+        </div>
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="🔍 Search for websites...">
+        </div>
+
+        <div class="login">
+            <span class="user-chip" id="userChip"></span>
+            <button class="loginbtn" id="loginBtn" onclick="authBtnClick()">Login</button>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+        <div class="hero-wrap">
+
+            <img src="asad2.png" alt="Website Store Banner">
+
+            <div class="hero-overlay">
+
+                <span class="hero-badge">⚡ PREMIUM WEBSITE STORE</span>
+
+                <h1>
+                    We Build <span class="grad">Powerful</span><br>
+                    <span class="typing" id="typing"></span>
+                </h1>
+
+                <p>
+                    Ready-made professional websites for your business,
+                    portfolio, restaurant and more. Fast, modern and responsive.
+                </p>
+
+                <div class="hero-btns">
+                    <a href="#websites" class="hbtn primary">Explore Websites</a>
+                    <a href="#contact" class="hbtn ghost">Custom Website</a>
+                </div>
+
+            </div>
+
+            <div class="float-chip c1">⚡ Super Fast</div>
+            <div class="float-chip c2">📱 Mobile Ready</div>
+            <div class="float-chip c3">🎨 Modern Design</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span><b>●</b> E-COMMERCE</span><span><b>●</b> PORTFOLIO</span><span><b>●</b> BUSINESS</span>
+            <span><b>●</b> RESTAURANT</span><span><b>●</b> BLOG</span><span><b>●</b> AGENCY</span>
+            <span><b>●</b> RESPONSIVE</span><span><b>●</b> FAST</span><span><b>●</b> SECURE</span>
+            <span><b>●</b> E-COMMERCE</span><span><b>●</b> PORTFOLIO</span><span><b>●</b> BUSINESS</span>
+            <span><b>●</b> RESTAURANT</span><span><b>●</b> BLOG</span><span><b>●</b> AGENCY</span>
+            <span><b>●</b> RESPONSIVE</span><span><b>●</b> FAST</span><span><b>●</b> SECURE</span>
+        </div>
+    </div>
+
+
+    <!-- ================= STATS ================= -->
+    <section class="stats reveal">
+        <div class="stat"><h3><span class="count" data-to="6">0</span>+</h3><p>Ready Websites</p></div>
+        <div class="stat"><h3><span class="count" data-to="100">0</span>%</h3><p>Responsive Design</p></div>
+        <div class="stat"><h3><span class="count" data-to="24">0</span>/7</h3><p>Support</p></div>
+        <div class="stat"><h3><span class="count" data-to="50">0</span>+</h3><p>Happy Clients</p></div>
+    </section>
+
+
+    <!-- ================= WEBSITE SECTION ================= -->
+    <section class="website-section" id="websites">
+
+        <div class="section-title reveal">
+            <h2>🔥 Featured Websites</h2>
+            <p>Choose a professional website for your business</p>
+        </div>
+
+        <div class="website-container" id="siteList">
+
+            <!-- CARD 1 -->
+            <div class="website-card">
+                <div class="glare"></div>
+                <div class="website-image"><img src="asad122.png" alt="E-Commerce Website"></div>
+                <div class="website-info">
+                    <span class="tag">Popular</span>
+                    <h3>E-Commerce Website</h3>
+                    <p>Modern online shopping website with responsive design.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price">₹4,999</div>
+                    <a href="https://www.facebook.com/" target="_blank" class="demo-link">View Website</a>
+                    <a href="payment.html?product=E-Commerce%20Website&price=4999" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="website-card">
+                <div class="glare"></div>
+                <div class="website-image"><img src="asad15.png" alt="Portfolio Website"></div>
+                <div class="website-info">
+                    <span class="tag">New</span>
+                    <h3>Portfolio Website</h3>
+                    <p>Professional portfolio website for students and developers.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price">₹2,999</div>
+                    <a href="https://asadrazaa.netlify.app/" target="_blank" class="demo-link">View Website</a>
+                    <a href="payment.html?product=Portfolio%20Website&price=2999" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="website-card">
+                <div class="glare"></div>
+                <div class="website-image"><img src="asad12.png" alt="Business Website"></div>
+                <div class="website-info">
+                    <span class="tag">Business</span>
+                    <h3>Business Website</h3>
+                    <p>Professional website for small and medium businesses.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price">₹3,999</div>
+                    <a href="https://asad-cr.onrender.com/" target="_blank" class="demo-link">View Website</a>
+                    <a href="payment.html?product=Business%20Website&price=3999" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="website-card">
+                <div class="glare"></div>
+                <div class="website-image"><img src="reen12.png" alt="Restaurant Website"></div>
+                <div class="website-info">
+                    <span class="tag">Food</span>
+                    <h3>Restaurant Website</h3>
+                    <p>Modern restaurant website with menu and contact section.</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="price">₹3,499</div>
+                    <a href="https://www.tripadvisor.in/Restaurant_Review-g304554-d3268182-Reviews-Nawab_Saheb-Mumbai_Maharashtra.html" target="_blank" class="demo-link">View Website</a>
+                    <a href="payment.html?product=Restaurant%20Website&price=3499" class="buy-btn">BUY NOW</a>
+                </div>
+            </div>
+
+         
+
+        </div>
+
+        <p class="no-result" id="noResult">😕 No website found. Try another search.</p>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="categories" id="categories">
+
+        <div class="section-title reveal">
+            <h2>Browse Categories</h2>
+            <p>Find the perfect website for your needs</p>
+        </div>
+
+        <div class="category-container reveal">
+            <div class="category-card"><div class="category-icon">🛍️</div><h3>E-Commerce</h3><p>Online shopping websites</p></div>
+            <div class="category-card"><div class="category-icon">💼</div><h3>Business</h3><p>Business websites</p></div>
+            <div class="category-card"><div class="category-icon">👨‍💻</div><h3>Portfolio</h3><p>Personal portfolio</p></div>
+            <div class="category-card"><div class="category-icon">🍔</div><h3>Restaurant</h3><p>Food business websites</p></div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+    <section class="why">
+        <div class="section-title reveal">
+            <h2>⚡ Why Choose Us</h2>
+            <p>Kyun hamari websites aapke business ke liye sahi hain</p>
+        </div>
+        <div class="why-grid reveal">
+            <div class="why-card"><span>📱</span><h3>Fully Responsive</h3><p>Mobile, tablet aur laptop, har screen par sahi dikhti hain.</p></div>
+            <div class="why-card"><span>🎨</span><h3>Modern Design</h3><p>Clean, professional aur eye-catching look.</p></div>
+            <div class="why-card"><span>🛒</span><h3>Easy Buying</h3><p>Cart, UPI QR se payment aur seedha sampark.</p></div>
+            <div class="why-card"><span>✍️</span><h3>Custom Options</h3><p>Apne hisaab se alag website bhi banwa sakte hain.</p></div>
+        </div>
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq" id="faq">
+        <div class="section-title reveal">
+            <h2>❓ Aksar Puchhe Jaane Wale Sawal</h2>
+            <p>Sawal par click karke jawab dekhein</p>
+        </div>
+        <div class="faq-list reveal">
+            <details>
+                <summary>Website kaise kharidein?</summary>
+                <p>Sabse pehle login ya sign up karein (bina login ke kharidari nahi hoti). Phir apni pasand ki website par BUY NOW dabayein, ya Add to Cart karke cart se checkout karein. Phir payment page par QR scan karke UPI se payment karein.</p>
+            </details>
+            <details>
+                <summary>Payment kaise karni hai?</summary>
+                <p>Payment page par diya gaya QR code apne UPI app (GPay, PhonePe, Paytm etc.) se scan karein, payment karein, phir "I Have Paid" button dabayein.</p>
+            </details>
+            <details>
+                <summary>Payment ke baad kya hoga?</summary>
+                <p>"I Have Paid" dabane ke baad hamari team aapki payment check karti hai aur aapse sampark karti hai.</p>
+            </details>
+            <details>
+                <summary>Kya main apne hisaab se alag website bana sakta hoon?</summary>
+                <p>Ji haan. "Contact Us" par click karke form bharein aur apni requirement likhein, hum aapse baat karenge.</p>
+            </details>
+            <details>
+                <summary>Delivery, support ya aur kisi cheez ke baare mein poochna hai?</summary>
+                <p>Contact form bharein ya WhatsApp button se seedha message karein, hamari team aapko sahi jankari degi.</p>
+            </details>
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+        <h2>Need a Custom Website?</h2>
+        <p>Contact us and we will build a website according to your requirements.</p>
+        <button class="contact-btn" onclick="openContact()">Contact Us</button>
+    </section>
+
+    <footer>© 2026 Website Store. All rights reserved.</footer>
+
+
+    <!-- ================= CART DRAWER ================= -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-head">
+            <h3>🛒 Your Cart</h3>
+            <button class="close-btn" id="cartClose" style="position:static;">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-foot">
+            <div class="cart-total"><span>Total</span><b id="cartTotal">₹0</b></div>
+            <button class="submit-login" id="checkoutBtn">Checkout 🚀</button>
+            <button class="clear-cart" id="clearCart">Cart khaali karein</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+
+    <!-- ================= HELP AGENT ================= -->
+    <div id="bot">
+
+        <div class="bot-bubble" id="botBubble">
+            <span class="bubble-x" id="bubbleX">×</span>
+            <b>Assalam o Alaikum 👋</b><br>
+            Koi bhi madad chahiye ho to mujhe click karein!
+        </div>
+
+        <button class="bot-btn" id="botBtn" title="Madad chahiye?">
+            <span class="bot-face">🤖</span>
+            <span class="bot-dot"></span>
+        </button>
+
+        <div class="bot-win" id="botWin">
+            <div class="bot-head">
+                <div class="bot-avatar">🤖</div>
+                <div class="bot-title">
+                    <b>Store Assistant</b>
+                    <small><i></i> Online</small>
+                </div>
+                <button class="bot-close" id="botClose">×</button>
+            </div>
+
+            <div class="bot-body" id="botBody"></div>
+
+            <div class="bot-chips" id="botChips"></div>
+
+            <form class="bot-input" id="botForm" autocomplete="off">
+                <input type="text" id="botText" placeholder="Apna sawal likhein...">
+                <button type="submit">➤</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- FLOATING BUTTONS -->
+    <!-- apna WhatsApp number yahan daalo: 9152780668 -->
+    <a href="https://wa.me/9152780668" target="_blank" class="wa-float" title="WhatsApp">💬</a>
+    <button id="toTop" title="Back to top">↑</button>
+
+
+    <!-- ================= CONTACT POPUP ================= -->
+    <div class="login-overlay" id="contactOverlay">
+        <div class="login-form contact-form">
+
+            <button class="close-btn" onclick="closeContact()">×</button>
+
+            <!-- FORM VIEW -->
+            <div id="contactFormView">
+
+                <div class="login-logo"><img src="asad3.png" alt="Logo"></div>
+
+                <h2>Contact Us 📩</h2>
+                <p>Tell us what you need, we will get back to you soon.</p>
+
+                <form id="contactForm" novalidate>
+
+                    <label for="cName">Full Name *</label>
+                    <input type="text" id="cName" placeholder="Enter your name" maxlength="50">
+                    <small class="err" id="eName"></small>
+
+                    <label for="cPhone">Mobile Number *</label>
+                    <div class="phone-wrap">
+                        <span class="cc">🇮🇳 +91</span>
+                        <input type="tel" id="cPhone" placeholder="10 digit number" maxlength="10" inputmode="numeric">
+                    </div>
+                    <small class="err" id="ePhone"></small>
+
+                    <label for="cEmail">Email (optional)</label>
+                    <input type="email" id="cEmail" placeholder="you@example.com">
+                    <small class="err" id="eEmail"></small>
+
+                    <label for="cType">Website Type *</label>
+                    <select id="cType">
+                        <option value="">-- Select --</option>
+                        <option>E-Commerce Website</option>
+                        <option>Business Website</option>
+                        <option>Portfolio Website</option>
+                        <option>Restaurant Website</option>
+                        <option>Blog Website</option>
+                        <option>Agency Website</option>
+                        <option>Custom Website</option>
+                    </select>
+                    <small class="err" id="eType"></small>
+
+                    <label for="cBudget">Budget</label>
+                    <select id="cBudget">
+                        <option value="">-- Select (optional) --</option>
+                        <option>Under ₹3,000</option>
+                        <option>₹3,000 - ₹5,000</option>
+                        <option>₹5,000 - ₹10,000</option>
+                        <option>₹10,000+</option>
+                    </select>
+
+                    <label for="cMsg">Message</label>
+                    <textarea id="cMsg" rows="3" maxlength="300" placeholder="Write your requirements..."></textarea>
+                    <small class="count-txt"><span id="msgCount">0</span>/300</small>
+
+                    <button type="submit" class="submit-login send-btn">Send Message 🚀</button>
+
+                </form>
+
+            </div>
+
+            <!-- SUCCESS VIEW -->
+            <div id="contactSuccess" style="display:none; text-align:center; padding:20px 0;">
+                <svg class="check" viewBox="0 0 70 70" style="width:80px;height:80px;margin:0 auto;display:block;">
+                    <circle cx="35" cy="35" r="30"/>
+                    <path d="M22 36 L32 46 L49 26"/>
+                </svg>
+                <h2 style="margin-top:15px;">Thank You! 🎉</h2>
+                <p style="margin-top:8px;">Your message is ready. WhatsApp should open now, just press Send there.</p>
+                <button class="submit-login" style="margin-top:20px;" onclick="closeContact()">Close</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= LOGIN POPUP ================= -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-form">
+
+            <button class="close-btn" onclick="closeLogin()">×</button>
+
+            <div class="login-logo"><img src="asad3.png" alt="Logo"></div>
+
+            <h2 id="authTitle">Welcome Back 👋</h2>
+            <p id="authSub">Login to continue</p>
+            <div class="auth-note" id="authNote"></div>
+
+            <form id="authForm" novalidate>
+                <div id="nameField" style="display:none;">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your name" maxlength="40">
+                </div>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+
+                <label for="password">Password</label>
+                <div class="pass-wrap">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <span class="eye" id="eye">👁️</span>
+                </div>
+
+                <small class="auth-err" id="authErr"></small>
+                <button type="submit" class="submit-login" id="authSubmit">Login</button>
+            </form>
+
+            <p class="signup-text" id="authSwitch">Account nahi hai? <a href="#">Sign Up</a></p>
+
+        </div>
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        /* ---------- LOGIN ---------- */
+        function openLogin() { document.getElementById("loginOverlay").classList.add("active"); }
+        function closeLogin() { document.getElementById("loginOverlay").classList.remove("active"); }
+
+        document.getElementById("loginOverlay").addEventListener("click", function (e) {
+            if (e.target === this) closeLogin();
+        });
+        document.addEventListener("keydown", e => { if (e.key === "Escape") closeLogin(); });
+
+        document.getElementById("eye").addEventListener("click", () => {
+            const p = document.getElementById("password");
+            p.type = p.type === "password" ? "text" : "password";
+        });
+
+
+        /* ---------- CONTACT FORM ---------- */
+        // Apna WhatsApp number yahan daalo (country code ke saath, bina + ke)
+        const WA_NUMBER = "91XXXXXXXXXX";
+
+        document.querySelector(".wa-float").href = "https://wa.me/" + WA_NUMBER;
+
+        const cOverlay = document.getElementById("contactOverlay");
+
+        function openContact() {
+            document.getElementById("contactFormView").style.display = "block";
+            document.getElementById("contactSuccess").style.display = "none";
+            cOverlay.classList.add("active");
+        }
+        function closeContact() { cOverlay.classList.remove("active"); }
+
+        cOverlay.addEventListener("click", e => { if (e.target === cOverlay) closeContact(); });
+        document.addEventListener("keydown", e => { if (e.key === "Escape") closeContact(); });
+
+        // only digits in phone
+        document.getElementById("cPhone").addEventListener("input", function () {
+            this.value = this.value.replace(/\D/g, "");
+        });
+        // message counter
+        document.getElementById("cMsg").addEventListener("input", function () {
+            document.getElementById("msgCount").textContent = this.value.length;
+        });
+
+        function setErr(id, text) { document.getElementById(id).textContent = text; return !text; }
+
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("cName").value.trim();
+            const phone = document.getElementById("cPhone").value.trim();
+            const email = document.getElementById("cEmail").value.trim();
+            const type = document.getElementById("cType").value;
+            const budget = document.getElementById("cBudget").value;
+            const msg = document.getElementById("cMsg").value.trim();
+
+            let ok = true;
+            ok = setErr("eName", name.length < 2 ? "Please enter your name" : "") && ok;
+            ok = setErr("ePhone", !/^[6-9]\d{9}$/.test(phone) ? "Enter a valid 10 digit mobile number" : "") && ok;
+            ok = setErr("eEmail", email && !/^\S+@\S+\.\S+$/.test(email) ? "Enter a valid email" : "") && ok;
+            ok = setErr("eType", !type ? "Please select website type" : "") && ok;
+            if (!ok) return;
+
+            const text =
+                "*New Website Enquiry*\n" +
+                "Name: " + name + "\n" +
+                "Mobile: +91 " + phone + "\n" +
+                (email ? "Email: " + email + "\n" : "") +
+                "Website Type: " + type + "\n" +
+                (budget ? "Budget: " + budget + "\n" : "") +
+                (msg ? "Message: " + msg : "");
+
+            document.getElementById("contactFormView").style.display = "none";
+            document.getElementById("contactSuccess").style.display = "block";
+            this.reset();
+            document.getElementById("msgCount").textContent = "0";
+
+            setTimeout(() => {
+                window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
+            }, 900);
+        });
+
+
+        /* ---------- AUTH (LOGIN / SIGN UP) ---------- */
+        const USERS_KEY = "storeUsers", SESSION_KEY = "storeSession";
+        let authMode = "login";
+        let pendingAfter = null;
+
+        function getUsers() {
+            try { return JSON.parse(localStorage.getItem(USERS_KEY)) || {}; } catch (e) { return {}; }
+        }
+        function getSession() {
+            try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch (e) { return null; }
+        }
+        function isLoggedIn() {
+            const s = getSession();
+            return !!(s && s.u && getUsers()[s.u]);
+        }
+
+        async function hashPass(pass, salt) {
+            const text = salt + ":" + pass;
+            if (window.crypto && crypto.subtle) {
+                const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+                return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+            }
+            let h = 5381;
+            for (const ch of text) h = ((h << 5) + h + ch.charCodeAt(0)) | 0;
+            return "f" + h;
+        }
+        function makeSalt() {
+            if (window.crypto && crypto.getRandomValues) {
+                return [...crypto.getRandomValues(new Uint8Array(8))].map(b => b.toString(16).padStart(2, "0")).join("");
+            }
+            return String(Math.random()).slice(2);
+        }
+
+        function setMode(m) {
+            authMode = m;
+            const signup = m === "signup";
+            document.getElementById("nameField").style.display = signup ? "block" : "none";
+            document.getElementById("authTitle").textContent = signup ? "Create Account ✨" : "Welcome Back 👋";
+            document.getElementById("authSub").textContent = signup ? "Naya account banayein" : "Login to continue";
+            document.getElementById("authSubmit").textContent = signup ? "Sign Up" : "Login";
+            document.getElementById("authSwitch").innerHTML = signup
+                ? 'Pehle se account hai? <a href="#">Login</a>'
+                : 'Account nahi hai? <a href="#">Sign Up</a>';
+            document.getElementById("authErr").textContent = "";
+        }
+        document.getElementById("authSwitch").addEventListener("click", e => {
+            if (e.target.tagName === "A") { e.preventDefault(); setMode(authMode === "login" ? "signup" : "login"); }
+        });
+
+        function updateAuthUI() {
+            const s = getSession();
+            const on = isLoggedIn();
+            const users = getUsers();
+            document.getElementById("loginBtn").textContent = on ? "Logout" : "Login";
+            const chip = document.getElementById("userChip");
+            chip.textContent = on ? "👤 " + (users[s.u].name || s.u) : "";
+            chip.style.display = on ? "inline-block" : "none";
+        }
+
+        function authBtnClick() {
+            if (isLoggedIn()) {
+                try { localStorage.removeItem(SESSION_KEY); } catch (e) {}
+                updateAuthUI();
+                toast("Aap logout ho gaye");
+            } else {
+                document.getElementById("authNote").style.display = "none";
+                openLogin();
+            }
+        }
+
+        // returns true if logged in; otherwise opens login and remembers what to do after
+        function requireLogin(after) {
+            if (isLoggedIn()) return true;
+            pendingAfter = after || null;
+            closeCart();
+            setMode("login");
+            const note = document.getElementById("authNote");
+            note.textContent = "🔒 Website kharidne ke liye pehle login karein";
+            note.style.display = "block";
+            openLogin();
+            return false;
+        }
+
+        // every link to payment page needs login
+        document.addEventListener("click", e => {
+            const a = e.target.closest && e.target.closest('a[href^="payment.html"]');
+            if (a && !isLoggedIn()) {
+                e.preventDefault(); e.stopPropagation();
+                const href = a.getAttribute("href");
+                requireLogin(() => { window.location.href = href; });
+            }
+        }, true);
+
+        document.getElementById("authForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const err = document.getElementById("authErr");
+            const name = document.getElementById("fullname").value.trim();
+            const user = document.getElementById("username").value.trim().toLowerCase();
+            const pass = document.getElementById("password").value;
+            err.textContent = "";
+
+            if (!/^[a-z0-9_.]{3,20}$/.test(user)) { err.textContent = "Username 3-20 characters ka ho (a-z, 0-9, _ .)"; return; }
+            if (pass.length < 6) { err.textContent = "Password kam se kam 6 characters ka rakhein"; return; }
+
+            const users = getUsers();
+
+            if (authMode === "signup") {
+                if (name.length < 2) { err.textContent = "Apna naam likhein"; return; }
+                if (users[user]) { err.textContent = "Ye username pehle se maujood hai"; return; }
+                const salt = makeSalt();
+                users[user] = { name, salt, hash: await hashPass(pass, salt) };
+                try { localStorage.setItem(USERS_KEY, JSON.stringify(users)); } catch (x) { err.textContent = "Browser storage band hai, account nahi ban sakta"; return; }
+            } else {
+                const u = users[user];
+                if (!u || (await hashPass(pass, u.salt)) !== u.hash) { err.textContent = "Username ya password galat hai"; return; }
+            }
+
+            try { localStorage.setItem(SESSION_KEY, JSON.stringify({ u: user })); } catch (x) {}
+            this.reset();
+            closeLogin();
+            updateAuthUI();
+            toast("✅ Welcome, " + users[user].name + "!");
+            const go = pendingAfter; pendingAfter = null;
+            if (go) setTimeout(go, 500);
+        });
+
+        updateAuthUI();
+        if (new URLSearchParams(location.search).get("login") && !isLoggedIn()) {
+            setTimeout(() => requireLogin(null), 1000);
+        }
+
+
+        /* ---------- CART ---------- */
+        const CART_KEY = "storeCart";
+        let cart = [];
+        try {
+            const saved = JSON.parse(localStorage.getItem(CART_KEY));
+            if (Array.isArray(saved)) {
+                cart = saved.filter(i => i && typeof i.name === "string" && Number.isFinite(i.price));
+            }
+        } catch (e) { cart = []; }
+
+        function saveCart() { try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {} }
+        function rupee(n) { return "₹" + n.toLocaleString("en-IN"); }
+
+        const toastEl = document.getElementById("toast");
+        let toastTimer;
+        function toast(msg) {
+            toastEl.textContent = msg;
+            toastEl.classList.add("show");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2200);
+        }
+
+        const cartDrawer = document.getElementById("cartDrawer");
+        const cartOverlay = document.getElementById("cartOverlay");
+        function openCart() { cartDrawer.classList.add("open"); cartOverlay.classList.add("open"); }
+        function closeCart() { cartDrawer.classList.remove("open"); cartOverlay.classList.remove("open"); }
+
+        function renderCart() {
+            const countEl = document.getElementById("cartCount");
+            countEl.textContent = cart.length;
+            countEl.classList.remove("bump");
+            void countEl.offsetWidth;
+            countEl.classList.add("bump");
+
+            const box = document.getElementById("cartItems");
+            box.innerHTML = "";
+
+            if (!cart.length) {
+                const e = document.createElement("div");
+                e.className = "cart-empty";
+                e.textContent = "😕 Aapka cart khaali hai. Koi website chun kar Add to Cart karein.";
+                box.appendChild(e);
+            }
+
+            cart.forEach((item, idx) => {
+                const row = document.createElement("div");
+                row.className = "cart-item";
+                const info = document.createElement("div");
+                const nm = document.createElement("b"); nm.textContent = item.name;
+                const pr = document.createElement("span"); pr.textContent = rupee(item.price);
+                info.appendChild(nm); info.appendChild(pr);
+                const rm = document.createElement("button");
+                rm.type = "button"; rm.className = "cart-remove"; rm.textContent = "🗑️";
+                rm.title = "Remove";
+                rm.onclick = () => { cart.splice(idx, 1); saveCart(); renderCart(); };
+                row.appendChild(info); row.appendChild(rm);
+                box.appendChild(row);
+            });
+
+            const total = cart.reduce((s, i) => s + i.price, 0);
+            document.getElementById("cartTotal").textContent = rupee(total);
+            document.getElementById("checkoutBtn").disabled = !cart.length;
+        }
+
+        // add "Add to Cart" button on every card
+        document.querySelectorAll(".website-card").forEach(card => {
+            const name = card.querySelector("h3").textContent.trim();
+            const price = Number(card.querySelector(".price").textContent.replace(/[^\d]/g, ""));
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "cart-btn";
+            btn.textContent = "🛒 Add to Cart";
+            btn.addEventListener("click", () => {
+                if (!requireLogin(() => btn.click())) return;
+                if (cart.some(i => i.name === name)) {
+                    toast("Ye website pehle se cart mein hai");
+                    openCart();
+                    return;
+                }
+                cart.push({ name, price });
+                saveCart();
+                renderCart();
+                toast("✅ " + name + " cart mein add ho gayi");
+            });
+            card.querySelector(".website-info").appendChild(btn);
+        });
+
+        // navbar cart link opens drawer
+        document.getElementById("cartCount").parentElement.addEventListener("click", e => {
+            e.preventDefault();
+            openCart();
+        });
+        document.getElementById("cartClose").addEventListener("click", closeCart);
+        cartOverlay.addEventListener("click", closeCart);
+        document.addEventListener("keydown", e => { if (e.key === "Escape") closeCart(); });
+
+        document.getElementById("clearCart").addEventListener("click", () => {
+            cart = []; saveCart(); renderCart();
+        });
+
+        document.getElementById("checkoutBtn").addEventListener("click", () => {
+            if (!cart.length) return;
+            if (!requireLogin(() => document.getElementById("checkoutBtn").click())) return;
+            const names = cart.map(i => i.name).join(" + ");
+            const total = cart.reduce((s, i) => s + i.price, 0);
+            window.location.href =
+                "payment.html?product=" + encodeURIComponent(names) + "&price=" + total;
+        });
+
+        renderCart();
+
+
+        /* ---------- HELP AGENT (CHATBOT) ---------- */
+        const botBtn = document.getElementById("botBtn");
+        const botWin = document.getElementById("botWin");
+        const botBody = document.getElementById("botBody");
+        const botChips = document.getElementById("botChips");
+        const botBubble = document.getElementById("botBubble");
+        let botStarted = false;
+
+        function el(tag, cls, text) {
+            const e = document.createElement(tag);
+            if (cls) e.className = cls;
+            if (text) e.textContent = text;
+            return e;
+        }
+
+        function scrollBot() { botBody.scrollTop = botBody.scrollHeight; }
+
+        function userSay(text) {
+            const m = el("div", "msg user", text);
+            botBody.appendChild(m); scrollBot();
+        }
+
+        // bot reply: text or DOM node, shown after a short typing animation
+        function botSay(content, after) {
+            const t = el("div", "msg bot typing-dots");
+            t.innerHTML = "<span></span><span></span><span></span>";
+            botBody.appendChild(t); scrollBot();
+            setTimeout(() => {
+                t.className = "msg bot";
+                t.innerHTML = "";
+                if (typeof content === "string") t.textContent = content;
+                else t.appendChild(content);
+                scrollBot();
+                if (after) after();
+            }, 650);
+        }
+
+        function setChips(list) {
+            botChips.innerHTML = "";
+            list.forEach(c => {
+                const b = el("button", "chip", c.label);
+                b.type = "button";
+                b.onclick = () => { userSay(c.label); c.run(); };
+                botChips.appendChild(b);
+            });
+        }
+
+        function sites() {
+            return [...document.querySelectorAll(".website-card")].map(c => ({
+                name: c.querySelector("h3").textContent.trim(),
+                price: c.querySelector(".price").textContent.trim(),
+                buy: c.querySelector(".buy-btn").getAttribute("href")
+            }));
+        }
+
+        /* --- bot answers --- */
+        const A = {
+            main() {
+                setChips([
+                    { label: "💰 Prices", run: A.prices },
+                    { label: "🌐 Websites", run: A.sites },
+                    { label: "🛒 Kaise kharidein?", run: A.howToBuy },
+                    { label: "✍️ Custom website", run: A.custom },
+                    { label: "📩 Contact form", run: A.contact },
+                    { label: "💬 WhatsApp", run: A.whatsapp }
+                ]);
+            },
+            greet() {
+                botSay("Walaikum Assalam! 😊 Main aapki kya madad kar sakta hoon?", A.main);
+            },
+            prices() {
+                const box = el("div");
+                box.appendChild(el("div", "", "Hamari websites ke rates:"));
+                sites().forEach(s => {
+                    const row = el("div", "row");
+                    row.appendChild(el("span", "", s.name));
+                    row.appendChild(el("b", "", s.price));
+                    box.appendChild(row);
+                });
+                botSay(box, A.main);
+            },
+            sites() {
+                const box = el("div");
+                box.appendChild(el("div", "", "Ye websites available hain, kharidne ke liye button dabayein 👇"));
+                sites().forEach(s => {
+                    const a = el("a", "mini-buy", s.name + " - " + s.price);
+                    a.href = s.buy;
+                    box.appendChild(a);
+                });
+                botSay(box, A.main);
+            },
+            howToBuy() {
+                botSay("Kharidna bahut aasan hai:\n1) Apni pasand ki website chunein\n2) BUY NOW dabayein\n3) QR scan karke UPI se payment karein\n4) \"I Have Paid\" dabayein, hum aapse sampark karenge ✅", A.main);
+            },
+            custom() {
+                const box = el("div");
+                box.appendChild(el("div", "", "Apne hisaab se website chahiye? Bilkul! Contact form bharein, hum aapki requirement ke mutabik bana denge. 🎨"));
+                const b = el("button", "mini-buy", "📩 Contact form kholein");
+                b.type = "button"; b.onclick = A.openForm;
+                box.appendChild(b);
+                botSay(box, A.main);
+            },
+            contact() {
+                const box = el("div");
+                box.appendChild(el("div", "", "Apna naam aur number form mein likh dein, hum jaldi sampark karenge 😊"));
+                const b = el("button", "mini-buy", "📩 Form kholein");
+                b.type = "button"; b.onclick = A.openForm;
+                box.appendChild(b);
+                botSay(box, A.main);
+            },
+            openForm() {
+                botWin.classList.remove("open");
+                openContact();
+            },
+            whatsapp() {
+                const box = el("div");
+                box.appendChild(el("div", "", "WhatsApp par seedha baat karein 👇"));
+                const a = el("a", "mini-buy", "💬 WhatsApp kholein");
+                a.href = "https://wa.me/" + WA_NUMBER; a.target = "_blank";
+                box.appendChild(a);
+                botSay(box, A.main);
+            },
+            timeline() {
+                botSay("Delivery/time ki exact jankari ke liye contact form bhar dein ya WhatsApp karein, team aapko confirm karke bata degi. 🙂", A.main);
+            },
+            thanks() {
+                botSay("Aapka bahut shukriya! 😊 Aur koi madad chahiye to bataiye.", A.main);
+            },
+            bye() {
+                botSay("Allah Hafiz! 👋 Dobara zaroor aaiyega.", A.main);
+            },
+            unknown() {
+                botSay("Maaf kijiye, main ye samajh nahi paya 🙏 Neeche diye options chunein ya contact form bharein, team aapki madad karegi.", A.main);
+            }
+        };
+
+        const intents = [
+            { k: ["assalam", "salam", "salaam", "hello", "hii", "hi ", "hey", "namaste"], f: A.greet },
+            { k: ["price", "rate", "kitna", "kitne", "kimat", "keemat", "cost", "paise", "charge", "daam"], f: A.prices },
+            { k: ["website", "list", "kya kya", "template", "demo", "dekh", "options"], f: A.sites },
+            { k: ["buy", "kharid", "khareed", "order", "payment", "pay ", "lena", "purchase", "qr", "upi"], f: A.howToBuy },
+            { k: ["custom", "apne hisab", "apni", "requirement", "alag", "special"], f: A.custom },
+            { k: ["whatsapp", "call", "number"], f: A.whatsapp },
+            { k: ["contact", "baat", "sampark", "form", "reach", "help", "madad"], f: A.contact },
+            { k: ["delivery", "kab", "kitne din", "time", "how long", "samay"], f: A.timeline },
+            { k: ["thank", "shukriya", "shukria", "dhanyawad", "jazak"], f: A.thanks },
+            { k: ["bye", "hafiz", "khuda", "alvida"], f: A.bye }
+        ];
+
+        function understand(text) {
+            const t = " " + text.toLowerCase() + " ";
+            for (const it of intents) {
+                if (it.k.some(w => t.includes(w))) return it.f;
+            }
+            return A.unknown;
+        }
+
+        /* --- open / close --- */
+        function hideBubble() { botBubble.classList.remove("show"); }
+
+        function openBot() {
+            hideBubble();
+            botWin.classList.add("open");
+            botBtn.classList.add("active");
+            if (!botStarted) {
+                botStarted = true;
+                botSay("Assalam o Alaikum! 👋 Main Store Assistant hoon. Aapko kis cheez mein madad chahiye?", A.main);
+            }
+            setTimeout(() => document.getElementById("botText").focus(), 300);
+        }
+        function closeBot() { botWin.classList.remove("open"); botBtn.classList.remove("active"); }
+
+        botBtn.addEventListener("click", () => botWin.classList.contains("open") ? closeBot() : openBot());
+        document.getElementById("botClose").addEventListener("click", closeBot);
+        botBubble.addEventListener("click", e => { if (e.target.id !== "bubbleX") openBot(); });
+        document.getElementById("bubbleX").addEventListener("click", e => { e.stopPropagation(); hideBubble(); });
+
+        document.getElementById("botForm").addEventListener("submit", e => {
+            e.preventDefault();
+            const inp = document.getElementById("botText");
+            const text = inp.value.trim();
+            if (!text) return;
+            inp.value = "";
+            userSay(text);
+            understand(text)();
+        });
+
+        // auto greeting when visitor arrives
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                if (!botWin.classList.contains("open")) botBubble.classList.add("show");
+            }, 2200);
+            setTimeout(hideBubble, 20000);
+        });
+
+
+        /* ---------- PRELOADER ---------- */
+        window.addEventListener("load", () => {
+            setTimeout(() => document.getElementById("preloader").classList.add("hide"), 700);
+        });
+
+
+        /* ---------- SCROLL PROGRESS + TO TOP ---------- */
+        const progress = document.getElementById("progress");
+        const toTop = document.getElementById("toTop");
+
+        window.addEventListener("scroll", () => {
+            const h = document.documentElement;
+            const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+            progress.style.width = pct + "%";
+            toTop.classList.toggle("show", h.scrollTop > 500);
+        });
+        toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+
+        /* ---------- CURSOR GLOW ---------- */
+        const glow = document.getElementById("cursor-glow");
+        window.addEventListener("mousemove", e => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
+
+
+        /* ---------- TYPING EFFECT ---------- */
+        const words = ["Business Websites", "Portfolio Websites", "Online Stores", "Restaurant Websites"];
+        const typingEl = document.getElementById("typing");
+        let wi = 0, ci = 0, del = false;
+
+        (function type() {
+            const w = words[wi];
+            typingEl.textContent = w.substring(0, ci);
+            if (!del && ci < w.length) { ci++; setTimeout(type, 90); }
+            else if (!del) { del = true; setTimeout(type, 1400); }
+            else if (ci > 0) { ci--; setTimeout(type, 45); }
+            else { del = false; wi = (wi + 1) % words.length; setTimeout(type, 300); }
+        })();
+
+
+        /* ---------- SCROLL REVEAL + COUNTERS ---------- */
+        function runCount(el) {
+            const to = +el.dataset.to;
+            let n = 0;
+            const step = Math.max(1, Math.ceil(to / 60));
+            const t = setInterval(() => {
+                n += step;
+                if (n >= to) { n = to; clearInterval(t); }
+                el.textContent = n;
+            }, 25);
+        }
+
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(en => {
+                if (en.isIntersecting) {
+                    en.target.classList.add("visible");
+                    en.target.querySelectorAll(".count").forEach(runCount);
+                    io.unobserve(en.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+        // cards slide in one by one
+        document.querySelectorAll(".website-card").forEach((c, i) => {
+            c.style.opacity = 0;
+            c.style.transform = "translateY(60px)";
+            setTimeout(() => { c.style.opacity = 1; c.style.transform = ""; }, 600 + i * 150);
+        });
+
+
+        /* ---------- 3D TILT + GLARE ON CARDS ---------- */
+        document.querySelectorAll(".website-card").forEach(card => {
+            card.addEventListener("mousemove", e => {
+                const r = card.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width;
+                const y = (e.clientY - r.top) / r.height;
+                card.style.transform =
+                    "rotateY(" + ((x - 0.5) * 18) + "deg) rotateX(" + ((0.5 - y) * 18) + "deg) translateY(-8px)";
+                card.style.setProperty("--gx", x * 100 + "%");
+                card.style.setProperty("--gy", y * 100 + "%");
+            });
+            card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+        });
+
+
+        /* ---------- DRAG TO SCROLL ---------- */
+        const list = document.getElementById("siteList");
+        let down = false, startX, startScroll, moved = false;
+
+        list.addEventListener("mousedown", e => { down = true; moved = false; startX = e.pageX; startScroll = list.scrollLeft; });
+        window.addEventListener("mouseup", () => { down = false; list.classList.remove("dragging"); });
+        list.addEventListener("mousemove", e => {
+            if (!down) return;
+            const dx = e.pageX - startX;
+            if (Math.abs(dx) > 5) { moved = true; list.classList.add("dragging"); }
+            list.scrollLeft = startScroll - dx;
+        });
+        list.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+
+        /* ---------- SEARCH FILTER ---------- */
+        document.getElementById("searchInput").addEventListener("input", function () {
+            const q = this.value.toLowerCase().trim();
+            let shown = 0;
+            document.querySelectorAll(".website-card").forEach(c => {
+                const text = c.innerText.toLowerCase();
+                const ok = text.includes(q);
+                c.style.display = ok ? "" : "none";
+                if (ok) shown++;
+            });
+            document.getElementById("noResult").style.display = shown ? "none" : "block";
+            if (q) document.getElementById("websites").scrollIntoView({ behavior: "smooth" });
+        });
+
+
+        /* ---------- PARTICLE NETWORK BACKGROUND ---------- */
+        const cv = document.getElementById("particles");
+        const cx = cv.getContext("2d");
+        let W, H, pts = [];
+        const mouse = { x: -999, y: -999 };
+
+        function resize() {
+            W = cv.width = window.innerWidth;
+            H = cv.height = window.innerHeight;
+            pts = Array.from({ length: Math.min(90, Math.floor(W / 16)) }, () => ({
+                x: Math.random() * W, y: Math.random() * H,
+                vx: (Math.random() - .5) * .6, vy: (Math.random() - .5) * .6
+            }));
+        }
+        window.addEventListener("resize", resize);
+        window.addEventListener("mousemove", e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        resize();
+
+        function draw() {
+            cx.clearRect(0, 0, W, H);
+            for (let i = 0; i < pts.length; i++) {
+                const p = pts[i];
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > W) p.vx *= -1;
+                if (p.y < 0 || p.y > H) p.vy *= -1;
+
+                cx.beginPath();
+                cx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+                cx.fillStyle = "rgba(0,229,160,.8)";
+                cx.fill();
+
+                for (let j = i + 1; j < pts.length; j++) {
+                    const q = pts[j];
+                    const d = Math.hypot(p.x - q.x, p.y - q.y);
+                    if (d < 130) {
+                        cx.strokeStyle = "rgba(0,229,160," + (0.25 * (1 - d / 130)) + ")";
+                        cx.beginPath(); cx.moveTo(p.x, p.y); cx.lineTo(q.x, q.y); cx.stroke();
+                    }
+                }
+                const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+                if (dm < 170) {
+                    cx.strokeStyle = "rgba(0,180,255," + (0.5 * (1 - dm / 170)) + ")";
+                    cx.beginPath(); cx.moveTo(p.x, p.y); cx.lineTo(mouse.x, mouse.y); cx.stroke();
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) draw();
+
+    </script>
+
+</body>
+</html>
